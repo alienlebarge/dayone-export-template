@@ -1,0 +1,28 @@
+{
+  "name": "dayone-export-template",
+  "version": "0.0.0",
+  "description": "Template for exporting dayone journal in html and print a book of it",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://alienlebarge@github.com/alienlebarge/dayone-export-template.git"
+  },
+  "keywords": [
+    "dayone",
+    "print",
+    "export",
+    "template"
+  ],
+  "author": "Cédric Aellen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alienlebarge/dayone-export-template/issues"
+  },
+  "homepage": "https://github.com/alienlebarge/dayone-export-template",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
