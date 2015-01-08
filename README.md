@@ -11,4 +11,4 @@ We use [Dayone](http://dayoneapp.com) as a family book. It's time now to make it
 1. Install [dayone_export](https://github.com/nathangrigg/dayone_export) :point_right: `pip install dayone_export`
 1. install grunt and dependencies :point_right: `$ npm install`
 1. Copy dayone journal in the folder 'cp -rf ~Dropbox/Apps/Day\ One/Journal.dayone build/'
-1. Export dayone journal :point_right: `dayone_export --output journal.html --template /path/to/template.html /path/to/Journal.dayone`
+1. Export dayone journal :point_right: `dayone_export --output build/journal.html --template templates/default.html build/Journal.dayone`
