@@ -2,4 +2,5 @@
 stylesheets
 node_modules
 npm-debug.log
-build
+*.dayone
+index.html

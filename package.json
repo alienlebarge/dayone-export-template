@@ -24,6 +24,7 @@
   "homepage": "https://github.com/alienlebarge/dayone-export-template",
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-browser-sync": "^1.5.3",
     "grunt-contrib-compass": "^1.0.1"
   }
 }

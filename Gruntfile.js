@@ -17,11 +17,22 @@ module.exports = function(grunt) {
           cssDir: 'stylesheets'
         }
       }
+    },
+    browserSync: {
+      bsFiles: {
+        src : 'stylesheets/*.css'
+      },
+      options: {
+        server: {
+          baseDir: "./"
+        }
+      }
     }
   });
 
   // Load the plugin that provides the "compass" task.
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-browser-sync');
 
   // Default task(s).
   grunt.registerTask('default', ['compass']);
