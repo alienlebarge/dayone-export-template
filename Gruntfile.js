@@ -11,11 +11,18 @@ module.exports = function(grunt) {
         }
       }
     },
+    watch: {
+      sass: {
+        files: 'sass/**/*.scss',
+        tasks: ['compass']
+      }
+    },
     browserSync: {
       bsFiles: {
         src : 'stylesheets/*.css'
       },
       options: {
+        watchTask: true,
         server: {
           baseDir: "./"
         }
@@ -23,11 +30,12 @@ module.exports = function(grunt) {
     }
   });
 
-  // Load the plugin that provides the "compass" task.
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
 
-  // Default task(s).
+  // Task(s).
   grunt.registerTask('default', ['compass']);
+  grunt.registerTask('dev', ['compass', 'browserSync', 'watch']);
 
 };
