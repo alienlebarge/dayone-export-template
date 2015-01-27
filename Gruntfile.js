@@ -3,15 +3,8 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    compass: {                  // Task
-      // dist: {                   // Target
-      //   options: {              // Target options
-      //     sassDir: 'sass',
-      //     cssDir: 'stylesheets',
-      //     environment: 'production'
-      //   }
-      // },
-      dev: {                    // Another target
+    compass: {
+      dev: {
         options: {
           sassDir: 'sass',
           cssDir: 'stylesheets'
