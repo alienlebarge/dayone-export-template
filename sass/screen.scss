@@ -29,6 +29,16 @@ body {
   font-family: $base-font-family;
   color: $base-font-color;
   //@include debug-vertical-alignment();
+
+  // Improve legibility
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // font kerning
+  font-variant-ligatures: common-ligatures;
+  font-variant-numeric: diagonal-fractions;
+  font-feature-settings: "kern", "liga", "clig", "frac";
 }
 
 // Shared
