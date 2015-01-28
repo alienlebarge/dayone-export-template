@@ -81,11 +81,7 @@ article header p {
 }
 
 article {
-  page-break-before: always;
   page-break-inside: avoid;
-  width: 35em;
-  margin-right: auto;
-  margin-left: auto;
   display: block;
   @include clearfix;
 }
