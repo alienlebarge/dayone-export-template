@@ -17,7 +17,7 @@
       {% if entry.place() %}
       {{ entry.place() }},
       {% endif %}
-      {{ entry['Date'] | format('%-I:%M %p %Z') }}
+      {{ entry['Date'] | format('%-I:%M %p') }}
     </p>
     <div class="entry-text">
       {% if 'Photo' in entry %}
