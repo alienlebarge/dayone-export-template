@@ -82,6 +82,13 @@ article {
   display: block;
 }
 
+.entry-text > p:first-child {
+  font-family: $base-heading-font-family;
+  color: $base-heading-color;
+  @include adjust-font-size-to($heading-size-1);
+  @include rhythm(1, 0, 0, 1, $heading-size-1);
+}
+
 img {
   max-width: 35em;
   max-height: 20em;
