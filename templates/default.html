@@ -12,19 +12,23 @@
   <h1 class="page-title">Journal Entries</h1>
   {% for entry in journal %}
   <article class="entry">
-    <h1 class="entry-title">{{ entry['Date'] | format('%A, %d %B %Y') }}</h1>
-    <p class="location time">
-      {% if entry.place() %}
-      {{ entry.place() }},
-      {% endif %}
-      {{ entry['Date'] | format('%-I:%M %p') }}
-    </p>
+
+    {% if 'Photo' in entry %}
+    <img class="entry-photo" src="Journal.dayone/{{ entry['Photo']  }}"/>
+    {% endif %}
+
     <div class="entry-text">
-      {% if 'Photo' in entry %}
-      <img class="entry-photo" src="Journal.dayone/{{ entry['Photo']  }}"/>
-      {% endif %}
       {{ entry['Text'] | markdown }}
     </div>
+
+    <p class="muted">
+      {{ entry['Date'] | format('%A, %d %B %Y') }} &agrave; {{ entry['Date'] | format('%H:%M') }}
+      {% if entry.place() %}
+      <br>
+      {{ entry.place() }},
+      {% endif %}
+    </p>
+
   </article>
   {% endfor %}
 </body>
