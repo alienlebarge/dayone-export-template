@@ -4,6 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/utilities/general/clearfix";
 @import "compass/typography/vertical_rhythm";
 
 $base-font-family: "freight-text-pro", sans-serif;
@@ -16,12 +17,28 @@ $muted-color: #999;
 $base-font-size: 18px;
 $base-line-height: $base-font-size * 1.5;
 
-$heading-size-1:  60px;
+$heading-size-1:  36px;
 $heading-size-2:  36px;
 $heading-size-3:  24px;
 $heading-size-4:  20px;
 $heading-size-5:  16px;
 $heading-size-6:  14px;
+
+// Mixins
+
+@mixin h1 {
+  font-family: $base-heading-font-family;
+  color: $base-heading-color;
+  @include adjust-font-size-to($heading-size-1);
+  @include rhythm(1, 0, 0, 1, $heading-size-1);
+}
+
+@mixin h2 {
+  font-family: $base-heading-font-family;
+  color: $base-heading-color;
+  @include adjust-font-size-to($heading-size-2);
+  @include rhythm(1, 0, 0, 1, $heading-size-2);
+}
 
 @include establish-baseline();
 
@@ -51,20 +68,10 @@ pre {
   @include rhythm();
 }
 
-h1, h2, h2, h3, h4, h5, h6 {
-  font-family: $base-heading-font-family;
-  color: $base-heading-color;
-}
+// Headings
+h1 { @include h1; }
+h2 { @include h2; }
 
-h1 {
-  @include adjust-font-size-to($heading-size-1);
-  @include rhythm(1, 0, 0, 1, $heading-size-1);
-}
-
-h2 {
-  @include adjust-font-size-to($heading-size-2);
-  @include rhythm(1, 0, 0, 1, $heading-size-2);
-}
 .small {
   @include adjust-font-size-to($heading-size-6);
 }
@@ -80,21 +87,19 @@ article {
   margin-right: auto;
   margin-left: auto;
   display: block;
+  @include clearfix;
 }
 
 .entry-text > p:first-child {
-  font-family: $base-heading-font-family;
-  color: $base-heading-color;
-  @include adjust-font-size-to($heading-size-1);
-  @include rhythm(1, 0, 0, 1, $heading-size-1);
+  @include h1;
 }
 
 img {
-  max-width: 35em;
-  max-height: 20em;
-  margin-right: auto;
-  margin-left: auto;
+  width: 40%;
+  float: left;
   display: block;
+  padding-right: 1em;
+  padding-bottom: 1em;
 }
 
 .muted {
