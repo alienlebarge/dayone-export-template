@@ -12,7 +12,7 @@
   <h1 class="page-title">Journal Entries</h1>
   {% for entry in journal %}
   <article class="entry">
-    <h1 class="entry-title">{{ entry['Date'] | format }}</h1>
+    <h1 class="entry-title">{{ entry['Date'] | format('%A, %d %B %Y') }}</h1>
     <p class="location time">
       {% if entry.place() %}
       {{ entry.place() }},
