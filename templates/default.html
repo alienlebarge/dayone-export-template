@@ -14,7 +14,9 @@
   <article class="entry">
 
     {% if 'Photo' in entry %}
-    <img class="entry-photo" src="Journal.dayone/{{ entry['Photo']  }}"/>
+    <figure>
+      <img class="entry-photo" src="Journal.dayone/{{ entry['Photo']  }}"/>
+    </figure>
     {% endif %}
 
     <div class="entry-text">
