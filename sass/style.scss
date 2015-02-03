@@ -8,7 +8,7 @@ $base-small-font-family: "freight-micro-pro", $base-font-family;
 
 $base-font-color: #333;
 $base-heading-color: #FF6B6B;
-$muted-color: #999;
+$muted-color: #505050;
 
 $base-font-size: 16px;
 $base-line-height: $base-font-size * 1.5;
@@ -34,6 +34,11 @@ $heading-size-6:  $base-font-size*0.8;
   color: $base-heading-color;
   @include adjust-font-size-to($heading-size-2);
   @include rhythm(1, 0, 0, 1, $heading-size-2);
+}
+
+@mixin small {
+  @include adjust-font-size-to($heading-size-6);
+  font-family: $base-small-font-family;
 }
 
 @include establish-baseline();
@@ -68,10 +73,7 @@ pre {
 h1 { @include h1; }
 h2 { @include h2; }
 
-.small {
-  @include adjust-font-size-to($heading-size-6);
-  font-family: $base-small-font-family;
-}
+.small { @include small; }
 
 article {
   header p {
