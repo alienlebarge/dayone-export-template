@@ -29,6 +29,10 @@
       <br>
       <img data-src="http://www.alienlebarge.ch/assets/iconic/1.7.0/svg/smart/map.svg" class="iconic iconic-sm" alt="map"> {{ entry.place() }},
       {% endif %}
+      {% if entry.weather('C') %}
+      <br>
+      <img data-src="http://www.alienlebarge.ch/assets/iconic/1.7.0/svg/smart/cloudy.svg" class="iconic iconic-sm" alt="cloudy"> {{ entry.weather('C') }}
+      {% endif %}
     </p>
 
   </article>
