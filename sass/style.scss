@@ -73,7 +73,9 @@ pre {
 h1 { @include h1; }
 h2 { @include h2; }
 
-.small { @include small; }
+.small {
+  @include small;
+}
 
 article {
   header p {
@@ -96,14 +98,40 @@ img {
   padding-bottom: 1em;
 }
 
+// muted color
 .muted {
   color: $muted-color;
-  .iconic {
-    color: red;
+  .iconic * {
+    fill: $muted-color;
+    stroke: $muted-color;
   }
 }
 
-.iconic-sm {
-  height: $base-font-size;
-  width: $base-font-size;
+.iconic * {
+  fill: $base-font-color;
+  stroke: $base-font-color;
+}
+
+.iconic .iconic-property-accent,
+.muted .iconic .iconic-property-accent {
+  fill: $base-heading-color;
+  stroke: $base-heading-color;
+}
+
+.small {
+  svg.iconic.iconic-sm:not(.iconic-size-md):not(.iconic-size-lg) {
+    height: $heading-size-6;
+    width: $heading-size-6;
+  }
+}
+
+svg.iconic{
+  &.iconic-md {
+    height: $base-font-size;
+    width: $base-font-size;
+  }
+  &.iconic-sm {
+    height: $heading-size-6;
+    width: $heading-size-6;
+  }
 }
