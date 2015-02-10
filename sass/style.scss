@@ -90,7 +90,7 @@ article {
   @include h1;
 }
 
-img {
+img.entry-photo {
   width: 30%;
   float: left;
   display: block;
@@ -134,4 +134,11 @@ svg.iconic{
     height: $heading-size-6;
     width: $heading-size-6;
   }
+}
+
+img.emoji {
+   height: 1em;
+   width: 1em;
+   margin: 0 .05em 0 .1em;
+   vertical-align: -0.1em;
 }
