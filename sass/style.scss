@@ -10,10 +10,10 @@ $base-font-color: #333;
 $base-heading-color: #FF6B6B;
 $muted-color: #505050;
 
-$base-font-size: 14px;
+$base-font-size: 13px;
 $base-line-height: $base-font-size * 1.5;
 
-$heading-size-1:  $base-font-size*2;
+$heading-size-1:  $base-font-size*1.8;
 $heading-size-2:  $base-font-size*1.5;
 $heading-size-3:  $base-font-size*1.3;
 $heading-size-4:  $base-font-size*1.2;
@@ -91,7 +91,7 @@ article {
 }
 
 img {
-  width: 40%;
+  width: 30%;
   float: left;
   display: block;
   padding-right: 1em;
