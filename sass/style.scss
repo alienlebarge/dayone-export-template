@@ -1,145 +1,19 @@
-@import "compass/reset";
-@import "compass/utilities/general/clearfix";
-@import "compass/typography/vertical_rhythm";
-@import "../bower_components/susy/sass/susy";
+@import 'settings.defaults';
 
-$base-font-family: "freight-text-pro", sans-serif;
-$base-heading-font-family: "bello-pro", sans-serif;
-$base-small-font-family: "freight-micro-pro", $base-font-family;
+@import 'tools.mixins';
 
-$base-font-color: #333;
-$base-heading-color: #FF6B6B;
-$muted-color: #505050;
+@import 'generic.reset';
+@import 'generic.shared';
 
-$base-font-size: 13px;
-$base-line-height: $base-font-size * 1.5;
+@import 'base.page';
+@import 'base.headings';
 
-$heading-size-1:  $base-font-size*1.8;
-$heading-size-2:  $base-font-size*1.5;
-$heading-size-3:  $base-font-size*1.3;
-$heading-size-4:  $base-font-size*1.2;
-$heading-size-5:  $base-font-size;
-$heading-size-6:  $base-font-size*0.8;
+@import 'generic.grid';
 
-// Mixins
+@import 'componment.entry';
+@import 'componment.entry-texts';
+@import 'componment.entry-photos';
+@import 'componment.iconic';
+@import 'componment.emoji';
 
-@mixin h1 {
-  font-family: $base-heading-font-family;
-  color: $base-heading-color;
-  @include adjust-font-size-to($heading-size-1);
-  @include rhythm(1, 0, 0, 1, $heading-size-1);
-}
-
-@mixin h2 {
-  font-family: $base-heading-font-family;
-  color: $base-heading-color;
-  @include adjust-font-size-to($heading-size-2);
-  @include rhythm(1, 0, 0, 1, $heading-size-2);
-}
-
-@mixin small {
-  @include adjust-font-size-to($heading-size-6);
-  font-family: $base-small-font-family;
-}
-
-@include establish-baseline();
-
-body {
-  font-family: $base-font-family;
-  color: $base-font-color;
-  //@include debug-vertical-alignment();
-
-  // Improve legibility
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  // font kerning
-  font-variant-ligatures: common-ligatures;
-  font-variant-numeric: diagonal-fractions;
-  font-feature-settings: "kern", "liga", "clig", "frac";
-}
-
-// Shared
-h1, h2, h3, h4, h5, h6,
-ul, ol, dl,
-blockquote, p, address,
-table,
-fieldset, figure,
-pre {
-  @include rhythm();
-}
-
-// Headings
-h1 { @include h1; }
-h2 { @include h2; }
-
-.small {
-  @include small;
-}
-
-article {
-  header p {
-    @include rhythm(-4, 0, 0, 1, $heading-size-1);
-  }
-  page-break-inside: avoid;
-  display: block;
-  @include clearfix;
-}
-
-.entry-text > p:first-child {
-  @include h1;
-}
-
-img.entry-photo {
-  width: 30%;
-  float: left;
-  display: block;
-  padding-right: 1em;
-  padding-bottom: 1em;
-}
-
-// muted color
-.muted {
-  color: $muted-color;
-  .iconic * {
-    fill: $muted-color;
-    stroke: $muted-color;
-  }
-}
-
-.iconic * {
-  fill: $base-font-color;
-  stroke: $base-font-color;
-}
-
-.iconic .iconic-property-accent,
-.muted .iconic .iconic-property-accent {
-  fill: $base-heading-color;
-  stroke: $base-heading-color;
-}
-
-.small {
-  svg.iconic.iconic-sm:not(.iconic-size-md):not(.iconic-size-lg) {
-    height: $heading-size-6;
-    width: $heading-size-6;
-  }
-}
-
-svg.iconic{
-  &.iconic-md {
-    height: $base-font-size;
-    width: $base-font-size;
-  }
-  &.iconic-sm {
-    height: $heading-size-6;
-    width: $heading-size-6;
-  }
-}
-
-img.emoji {
-   height: 1em;
-   width: 1em;
-   margin: 0 .05em 0 .1em;
-   vertical-align: -0.1em;
-}
+@import 'trumps.clearfix';

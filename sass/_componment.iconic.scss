@@ -1,0 +1,34 @@
+// muted color
+.muted .iconic * {
+    fill: $muted-color;
+    stroke: $muted-color;
+}
+
+.iconic * {
+  fill: $base-font-color;
+  stroke: $base-font-color;
+}
+
+.iconic .iconic-property-accent,
+.muted .iconic .iconic-property-accent {
+  fill: $base-heading-color;
+  stroke: $base-heading-color;
+}
+
+.small {
+  svg.iconic.iconic-sm:not(.iconic-size-md):not(.iconic-size-lg) {
+    height: $heading-size-6;
+    width: $heading-size-6;
+  }
+}
+
+svg.iconic{
+  &.iconic-md {
+    height: $base-font-size;
+    width: $base-font-size;
+  }
+  &.iconic-sm {
+    height: $heading-size-6;
+    width: $heading-size-6;
+  }
+}

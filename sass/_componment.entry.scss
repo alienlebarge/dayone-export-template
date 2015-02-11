@@ -1,0 +1,8 @@
+article {
+  header p {
+    @include rhythm(-4, 0, 0, 1, $heading-size-1);
+  }
+  page-break-inside: avoid;
+  display: block;
+
+}
