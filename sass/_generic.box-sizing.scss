@@ -1,0 +1,15 @@
+@import "compass/css3/box-sizing";
+
+html {
+  @include box-sizing();
+}
+
+* {
+
+  &,
+  &:before,
+  &:after {
+    @include box-sizing();
+  }
+
+}

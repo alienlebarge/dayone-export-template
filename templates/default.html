@@ -10,29 +10,32 @@
 <body>
   <h1 class="page-title">Journal Entries</h1>
   {% for entry in journal %}
-  <article class="entry">
-
-    {% if 'Photo' in entry %}
-    <figure>
-      <img class="entry-photo" src="Journal.dayone/{{ entry['Photo']  }}"/>
-    </figure>
-    {% endif %}
-
-    <div class="entry-text">
-      {{ entry['Text'] | markdown }}
+  <article class="entry grid">
+    <div class="grid__item grid__item--1">
+      {% if 'Photo' in entry %}
+      <figure>
+        <img class="entry-photo" src="Journal.dayone/{{ entry['Photo']  }}"/>
+      </figure>
+      {% endif %}
     </div>
 
-    <p class="muted small">
-      <img data-src="http://www.alienlebarge.ch/assets/iconic/1.7.0/svg/smart/calendar.svg" class="iconic iconic-sm" alt="calendar"> {{ entry['Date'] | format('%A, %d %B %Y') }} &agrave; {{ entry['Date'] | format('%H:%M') }}
-      {% if entry.place() %}
-      <br>
-      <img data-src="http://www.alienlebarge.ch/assets/iconic/1.7.0/svg/smart/map.svg" class="iconic iconic-sm" alt="map"> {{ entry.place() }},
-      {% endif %}
-      {% if entry.weather('C') %}
-      <br>
-      <img data-src="http://www.alienlebarge.ch/assets/iconic/1.7.0/svg/smart/cloudy.svg" class="iconic iconic-sm" alt="cloudy"> {{ entry.weather('C') }}
-      {% endif %}
-    </p>
+    <div class="entry__text grid__item grid__item--2">
+
+      {{ entry['Text'] | markdown }}
+
+      <p class="muted small">
+        <img data-src="http://www.alienlebarge.ch/assets/iconic/1.7.0/svg/smart/calendar.svg" class="iconic iconic-sm" alt="calendar"> {{ entry['Date'] | format('%A, %d %B %Y') }} &agrave; {{ entry['Date'] | format('%H:%M') }}
+        {% if entry.place() %}
+        <br>
+        <img data-src="http://www.alienlebarge.ch/assets/iconic/1.7.0/svg/smart/map.svg" class="iconic iconic-sm" alt="map"> {{ entry.place() }},
+        {% endif %}
+        {% if entry.weather('C') %}
+        <br>
+        <img data-src="http://www.alienlebarge.ch/assets/iconic/1.7.0/svg/smart/cloudy.svg" class="iconic iconic-sm" alt="cloudy"> {{ entry.weather('C') }}
+        {% endif %}
+      </p>
+
+    </div>
 
   </article>
   {% endfor %}

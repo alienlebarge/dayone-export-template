@@ -1,0 +1,7 @@
+.small {
+  @include small;
+}
+
+.muted {
+  color: $muted-color;
+}
