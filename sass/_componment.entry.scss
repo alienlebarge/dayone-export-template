@@ -1,5 +1,7 @@
 .entry {
   page-break-inside: avoid;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .entry__text > p:first-child {
