@@ -1,0 +1,27 @@
+{
+  "name": "dayone-export-template",
+  "version": "0.0.0",
+  "homepage": "https://github.com/alienlebarge/dayone-export-template",
+  "authors": [
+    "Cédric Aellen <cedric.aellen@alienlebarge.ch>"
+  ],
+  "description": "print template for dayone journal export",
+  "main": "index.html",
+  "keywords": [
+    "css",
+    "dayone",
+    "print"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.2"
+  }
+}

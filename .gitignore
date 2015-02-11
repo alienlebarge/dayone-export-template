@@ -4,3 +4,4 @@ node_modules
 npm-debug.log
 *.dayone
 index.html
+bower_components
