@@ -22,7 +22,6 @@
     "tests"
   ],
   "dependencies": {
-    "susy": "~2.2.2",
     "normalize.css": "~3.0.2"
   }
 }

@@ -1,1 +1,21 @@
-@import "../bower_components/susy/sass/susy";
+@import "compass/css3/flexbox";
+
+.grid {
+  @include display-flex;
+  @include flex-direction(row);
+  margin-left: -$base-font-size;
+}
+
+.grid__item {
+  padding-left: $base-font-size;
+}
+
+.grid__item--1 {
+  @include flex(1);
+}
+.grid__item--2 {
+  @include flex(2);
+}
+.grid__item--3 {
+  @include flex(3);
+}
