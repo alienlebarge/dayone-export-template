@@ -1,8 +1,7 @@
-article {
-  header p {
-    @include rhythm(-4, 0, 0, 1, $heading-size-1);
-  }
+.entry {
   page-break-inside: avoid;
-  display: block;
+}
 
+.entry__text > p:first-child {
+  @include h1;
 }

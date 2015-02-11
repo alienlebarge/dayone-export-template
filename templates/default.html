@@ -10,7 +10,7 @@
 <body>
   <h1 class="page-title">Journal Entries</h1>
   {% for entry in journal %}
-  <article class="grid">
+  <article class="entry grid">
     <div class="grid__item grid__item--1">
       {% if 'Photo' in entry %}
       <figure>
@@ -19,10 +19,9 @@
       {% endif %}
     </div>
 
-    <div class="grid__item grid__item--3">
-      <div class="entry-text">
-        {{ entry['Text'] | markdown }}
-      </div>
+    <div class="entry__text grid__item grid__item--3">
+
+      {{ entry['Text'] | markdown }}
 
       <p class="muted small">
         <img data-src="http://www.alienlebarge.ch/assets/iconic/1.7.0/svg/smart/calendar.svg" class="iconic iconic-sm" alt="calendar"> {{ entry['Date'] | format('%A, %d %B %Y') }} &agrave; {{ entry['Date'] | format('%H:%M') }}
@@ -35,6 +34,7 @@
         <img data-src="http://www.alienlebarge.ch/assets/iconic/1.7.0/svg/smart/cloudy.svg" class="iconic iconic-sm" alt="cloudy"> {{ entry.weather('C') }}
         {% endif %}
       </p>
+      
     </div>
 
   </article>
