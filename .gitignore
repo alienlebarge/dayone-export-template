@@ -5,3 +5,4 @@ npm-debug.log
 *.dayone
 index.html
 bower_components
+*.pdf
