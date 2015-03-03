@@ -26,6 +26,7 @@
     "grunt": "^0.4.5",
     "grunt-browser-sync": "^1.5.3",
     "grunt-contrib-compass": "^1.0.1",
-    "grunt-contrib-watch": "^0.6.1"
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-html-pdf": "0.0.3"
   }
 }

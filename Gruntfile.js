@@ -27,12 +27,32 @@ module.exports = function(grunt) {
           baseDir: "./"
         }
       }
+    },
+    html_pdf: {
+    dist: {
+      options: {
+        height: '30cm',
+        width: '30cm',
+        orientation: 'portrait',
+        "border": {
+          "top": "2in",
+          "right": "1in",
+          "bottom": "2in",
+          "left": "1.5in"
+        },
+        quality: '75',
+      },
+      files: {
+        'mypdf.pdf': ['index.html',],
+      },
     }
+  },
   });
 
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-html-pdf');
 
   // Task(s).
   grunt.registerTask('default', ['compass']);
