@@ -23,14 +23,14 @@
       {{ entry['Text'] | markdown }}
 
       <p class="muted small">
-        <img data-src="http://www.alienlebarge.ch/assets/iconic/1.7.0/svg/smart/calendar.svg" class="iconic iconic-sm" alt="calendar"> {{ entry['Date'] | format('%A, %d %B %Y') }} &agrave; {{ entry['Date'] | format('%H:%M') }}
+        <img data-src="https://dlgjp9x71cipk.cloudfront.net/assets/iconic/1.7.0/svg/smart/calendar.svg" class="iconic iconic-sm" alt="calendar"> {{ entry['Date'] | format('%A, %d %B %Y') }} &agrave; {{ entry['Date'] | format('%H:%M') }}
         {% if entry.place() %}
         <br>
-        <img data-src="http://www.alienlebarge.ch/assets/iconic/1.7.0/svg/smart/map.svg" class="iconic iconic-sm" alt="map"> {{ entry.place() }},
+        <img data-src="https://dlgjp9x71cipk.cloudfront.net/assets/iconic/1.7.0/svg/smart/map.svg" class="iconic iconic-sm" alt="map"> {{ entry.place() }},
         {% endif %}
         {% if entry.weather('C') %}
         <br>
-        <img data-src="http://www.alienlebarge.ch/assets/iconic/1.7.0/svg/smart/cloudy.svg" class="iconic iconic-sm" alt="cloudy"> {{ entry.weather('C') }}
+        <img data-src="https://dlgjp9x71cipk.cloudfront.net/assets/iconic/1.7.0/svg/smart/cloudy.svg" class="iconic iconic-sm" alt="cloudy"> {{ entry.weather('C') }}
         {% endif %}
       </p>
 
@@ -38,7 +38,7 @@
 
   </article>
   {% endfor %}
-  <script src="http://www.alienlebarge.ch/assets/iconic/1.7.0/js/iconic.min.js"></script>
+  <script src="https://dlgjp9x71cipk.cloudfront.net/assets/iconic/1.7.0/js/iconic.min.js"></script>
   <script src="http://twemoji.maxcdn.com/twemoji.min.js"></script>
   <script>
     twemoji.parse(document.getElementsByTagName('body')[0], {size: 72});
